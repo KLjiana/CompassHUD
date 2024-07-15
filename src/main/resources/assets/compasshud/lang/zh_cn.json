@@ -1,0 +1,31 @@
+{
+  "text.autoconfig.compasshud.title": "指南针 HUD 配置",
+  "text.autoconfig.compasshud.option.mode": "HUD 模式",
+  "text.autoconfig.compasshud.option.compassSettings": "指南针设置",
+  "text.autoconfig.compasshud.option.clockSettings": "时钟设置",
+
+  "text.autoconfig.compasshud.option.compassSettings.scale": "指南针缩放",
+  "text.autoconfig.compasshud.option.compassSettings.compassX": "指南针 X 位置",
+  "text.autoconfig.compasshud.option.compassSettings.compassY": "指南针 Y 位置",
+  "text.autoconfig.compasshud.option.compassSettings.textX": "文本 X 位置",
+  "text.autoconfig.compasshud.option.compassSettings.textY": "文本 Y 位置",
+  "text.autoconfig.compasshud.option.compassSettings.color": "文本颜色",
+  "text.autoconfig.compasshud.option.compassSettings.backgroundColor": "背景颜色",
+  "text.autoconfig.compasshud.option.compassSettings.light": "亮度",
+
+  "text.autoconfig.compasshud.option.clockSettings.scale": "时钟缩放",
+  "text.autoconfig.compasshud.option.clockSettings.compassX": "时钟 X 位置",
+  "text.autoconfig.compasshud.option.clockSettings.compassY": "时钟 Y 位置",
+  "text.autoconfig.compasshud.option.clockSettings.timeX": "时间 X 位置",
+  "text.autoconfig.compasshud.option.clockSettings.timeY": "时间 Y 位置",
+  "text.autoconfig.compasshud.option.clockSettings.dayX": "天数 X 位置",
+  "text.autoconfig.compasshud.option.clockSettings.dayY": "天数 Y 位置",
+  "text.autoconfig.compasshud.option.clockSettings.color": "文本颜色",
+  "text.autoconfig.compasshud.option.clockSettings.backgroundColor": "背景颜色",
+  "text.autoconfig.compasshud.option.clockSettings.light": "亮度",
+  "text.autoconfig.compasshud.option.clockSettings.timeText": "时间文本",
+  "text.autoconfig.compasshud.option.clockSettings.dayText": "天数文本",
+
+  "hud.compasshud.time": "%02d:%02d",
+  "hud.compasshud.day": "%d"
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "compasshud",
+  "version": "1.0",
+  "name": "Compass HUD",
+  "description": "A mod that shows a compass on the HUD",
+  "authors": [
+    "KL_jiana"
+  ],
+  "icon": "icon.png",
+  "contact": {},
+  "license": "LGPL-3.0",
+  "entrypoints": {
+    "main": [
+      "com.kljiana.compasshud.CompassHUD"
+    ],
+    "modmenu": [
+      "com.kljiana.compasshud.config.CompassHudMenu"
+    ]
+  },
+  "mixins": [
+    "compasshud.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "fabric": "*",
+    "minecraft": "1.21"
+  }
+}
