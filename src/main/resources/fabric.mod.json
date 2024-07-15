@@ -3,7 +3,7 @@
   "id": "compasshud",
   "version": "1.0",
   "name": "Compass HUD",
-  "description": "A mod that shows a compass on the HUD",
+  "description": "A mod that shows a compass and a clock on the HUD",
   "authors": [
     "KL_jiana"
   ],
