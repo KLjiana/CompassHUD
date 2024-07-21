@@ -1,31 +1,4 @@
 {
-  "text.autoconfig.compasshud.title": "Compass HUD Configuration",
-  "text.autoconfig.compasshud.option.mode": "HUD mode",
-  "text.autoconfig.compasshud.option.compassSettings": "Compass Setting",
-  "text.autoconfig.compasshud.option.clockSettings": "Clock Setting",
-
-  "text.autoconfig.compasshud.option.compassSettings.scale": "Compass Scale",
-  "text.autoconfig.compasshud.option.compassSettings.compassX": "Compass X Position",
-  "text.autoconfig.compasshud.option.compassSettings.compassY": "Compass Y Position",
-  "text.autoconfig.compasshud.option.compassSettings.textX": "Text X Position",
-  "text.autoconfig.compasshud.option.compassSettings.textY": "Text Y Position",
-  "text.autoconfig.compasshud.option.compassSettings.color": "Text Color",
-  "text.autoconfig.compasshud.option.compassSettings.backgroundColor": "Background Color",
-  "text.autoconfig.compasshud.option.compassSettings.light": "Light",
-
-  "text.autoconfig.compasshud.option.clockSettings.scale": "Clock Scale",
-  "text.autoconfig.compasshud.option.clockSettings.compassX": "Clock X Position",
-  "text.autoconfig.compasshud.option.clockSettings.compassY": "Clock Y Position",
-  "text.autoconfig.compasshud.option.clockSettings.timeX": "Time X Position",
-  "text.autoconfig.compasshud.option.clockSettings.timeY": "Time Y Position",
-  "text.autoconfig.compasshud.option.clockSettings.dayX": "Day X Position",
-  "text.autoconfig.compasshud.option.clockSettings.dayY": "Day Y Position",
-  "text.autoconfig.compasshud.option.clockSettings.color": "Text Color",
-  "text.autoconfig.compasshud.option.clockSettings.backgroundColor": "Background Color",
-  "text.autoconfig.compasshud.option.clockSettings.light": "Light",
-  "text.autoconfig.compasshud.option.clockSettings.timeText": "Time Text",
-  "text.autoconfig.compasshud.option.clockSettings.dayText": "Day Text",
-
-  "hud.compasshud.time": "%02d:%02d",
-  "hud.compasshud.day": "%d"
+  "string.compasshud.timetext": "Time",
+  "string.compasshud.daytext": "Day"
 }
