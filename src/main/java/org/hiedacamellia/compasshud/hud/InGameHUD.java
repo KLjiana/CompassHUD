@@ -1,22 +1,25 @@
 package org.hiedacamellia.compasshud.hud;
 
 
+import com.mojang.serialization.DataResult;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.GlobalPos;
-import net.minecraft.core.component.DataComponents;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtOps;
+import net.minecraft.nbt.NbtUtils;
+import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.component.LodestoneTracker;
 import net.minecraft.world.level.Level;
-import net.neoforged.bus.api.EventPriority;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.client.event.RenderGuiEvent;
+import net.minecraftforge.client.event.RenderGuiEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 import org.hiedacamellia.compasshud.CompassHUD;
 import org.hiedacamellia.compasshud.config.CompassHUDConfig;
 
@@ -24,7 +27,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.GAME)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class InGameHUD {
 
     static ItemStack compassStack = new ItemStack(Items.COMPASS);
@@ -67,9 +70,16 @@ public class InGameHUD {
             }else {
                 bs = BlockPos.containing(0,0,0);
             }
+            CompoundTag tags = compassStack.getOrCreateTag();
+            tags.put("LodestonePos", NbtUtils.writeBlockPos(bs));
+            tags.putBoolean("LodestoneTracked", true);
+            DataResult<Tag> var = Level.RESOURCE_KEY_CODEC.encodeStart(NbtOps.INSTANCE, Level.OVERWORLD);
+            Objects.requireNonNull(CompassHUD.LOGGER);
+            var.resultOrPartial(CompassHUD.LOGGER::error).ifPresent((Dimension) -> {
+                tags.put("LodestoneDimension", Dimension);
+            });
 
-            LodestoneTracker lodestonetracker = new LodestoneTracker(Optional.of(GlobalPos.of(level.dimension(), bs)), true);
-            compassStack.set(DataComponents.LODESTONE_TRACKER, lodestonetracker);
+            compassStack.setTag(tags);
             compassStack.inventoryTick(level, Minecraft.getInstance().player, 0, false);
         }catch (Exception e){
             CompassHUD.LOGGER.error("Failed to parse minecraft instance", e);
